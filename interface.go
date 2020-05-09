@@ -5,6 +5,8 @@ import (
 	"context"
 	"io"
 
+	"github.com/libp2p/go-libp2p-core/peer"
+
 	blocks "github.com/ipfs/go-block-format"
 	cid "github.com/ipfs/go-cid"
 )
@@ -18,6 +20,8 @@ type Interface interface { // type Exchanger interface
 	HasBlock(blocks.Block) error
 
 	IsOnline() bool
+
+	Push(context.Context, uint32, peer.ID, cid.Cid) error
 
 	io.Closer
 }
