@@ -1,4 +1,4 @@
-module github.com/ipfs/go-ipfs-exchange-interface
+module github.com/ETHFSx/go-ipfs-exchange-interface
 
 require (
 	github.com/ipfs/go-block-format v0.0.2
